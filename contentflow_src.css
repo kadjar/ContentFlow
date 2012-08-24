@@ -4,7 +4,21 @@
  * default style to look nice
  */
 
+h1 {
+    margin: 50px;
+    font-size: 48px;
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    font-size: 36px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
 .ContentFlow {
+    -ms-touch-action: none;
 }
     .ContentFlow .flow {
         /*border: 1px solid green;*/
