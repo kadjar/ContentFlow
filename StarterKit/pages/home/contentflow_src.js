@@ -422,7 +422,7 @@ ContentFlow.prototype = {
 		},
 
 		calcFontSize: function (item) {
-			return item.size.height;
+		//	return item.size.height;
 		},
    
 		calcOpacity: function (item) {
@@ -1628,19 +1628,21 @@ ContentFlow.prototype = {
 		var zIndex = item.zIndex = conf.calcZIndex (item);
 		var fontSize = item.fontSize = conf.calcFontSize (item);
 		var opacity = item.opacity = conf.calcOpacity(item);
-
+        /* 
 		size.height *= this.maxHeight;
 		size.width *= this.maxHeight;
 
-		/* set position */
+		/* set position 
 		var sA = vF ? size.height : size.width;
-		var sB = vF ? size.width : size.height;
-		var pX = this.Flow.center.x * ( 1 + coords.x )  + (relItemPos.x - 1)  * sA/2;
-		var pY = this.maxHeight/2 * ( 1 + coords.y ) + (relItemPos.y - 1 )* sB/2;
-		els.left = (vF ? pY : pX)+"px";
-		els.top = (vF ? pX : pY)+"px";
+		var sB = vF ? size.width : size.height; */
+		var pX = this.Flow.center.x * ( 1 + coords.x )  + (relItemPos.x - 1)  * 200; 
+	//	var pY = this.maxHeight/2 * ( 1 + coords.y ) + (relItemPos.y - 1 )* sB/2; 
+
+		els.left = (vF ? pY : pX) + "px";
+		els.transform = Math.abs(item.side) == 1 ? "rotateY(" + (-1*item.side * 45) + "deg )" : "rotateY( " + 0 + "deg )";
+	//	els.top = (vF ? pX : pY)+"px";
 		
-		this._setItemSize(item, size);
+		// this._setItemSize(item, size);
 
 		/* set opacity */
 		if (conf.endOpacity != 1) {
@@ -1666,7 +1668,7 @@ ContentFlow.prototype = {
 		var width = size.width;
 		var height = size.height;
 		var c = item.content;
-
+        /*
 		if (vF) {
 			if (prop <= 1) {
 				if (sFL != "max" && sFL != 1) {
@@ -1749,8 +1751,8 @@ ContentFlow.prototype = {
 		}
 		else {
 			return {width: width, height: height};
-		}
-
+		} 
+        */
 	},
 
 	_setItemSize: (function () {

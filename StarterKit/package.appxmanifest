@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="StarterKit" Logo="assets\images\logo.png" SmallLogo="assets\images\smalllogo.png" Description="StarterKit" ForegroundText="light" BackgroundColor="#464646">
+      <VisualElements DisplayName="ContentFlow-Win" Logo="assets\images\logo.png" SmallLogo="assets\images\smalllogo.png" Description="Content flow wrapped in a win8 app" ForegroundText="light" BackgroundColor="#464646">
         <DefaultTile ShowName="allLogos" WideLogo="assets\images\widelogo.png" />
         <SplashScreen Image="assets\images\splashscreen.png" BackgroundColor="white" />
       </VisualElements>

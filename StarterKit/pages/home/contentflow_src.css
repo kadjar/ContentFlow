@@ -19,16 +19,23 @@ h2 {
 
 .ContentFlow {
     -ms-touch-action: none;
+   
 }
     .ContentFlow .flow {
+         perspective: 600px;
+         transform-style: preserve-3d;
         /*border: 1px solid green;*/
     }
     .ContentFlow .flow * {
+
     }
 
-    .ContentFlow .flow .item {
+        .ContentFlow .flow .item {
+            /**/
+            transition: all 300ms ease-in;
+            backface-visibility: hidden ;
             /*border: 1px solid red;*/
-    }
+        }
         .ContentFlow .flow .item canvas.content {
             height: 100%;
             width: 100%;
